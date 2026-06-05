@@ -3,139 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анна Перова - HR Business Partner & Data Engineer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Анна Перова — HR Business Partner & Data Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #111;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* Навигация как у Дарьи */
+        .nav {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 80px;
+            font-size: 15px;
+            font-weight: 450;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .nav a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Заголовок */
+        .title {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #0066cc;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        /* Ссылки под именем (LinkedIn, GitHub и т.д.) */
+        .social-links {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Секции */
+        section {
+            margin-bottom: 56px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Стиль для Bio — как у Дарьи, просто текст */
+        .bio-text {
+            font-size: 16px;
+            color: #222;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* Experience и Projects в стиле Дарьи */
+        .entry {
+            margin-bottom: 32px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .entry-title {
+            font-weight: 600;
+            font-size: 17px;
+            color: #111;
+        }
+
+        .entry-date {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .entry-subtitle {
+            font-size: 14px;
+            color: #0066cc;
+            margin-bottom: 8px;
+        }
+
+        .entry-description {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .entry-description ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .entry-description li {
+            margin-bottom: 6px;
+        }
+
+        /* Для публикаций */
+        .paper-item {
+            margin-bottom: 16px;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .paper-venue {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Skills как у Дарьи — компактно */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .skill-tag {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 40px 24px;
+            }
+            .nav {
+                gap: 20px;
+                font-size: 14px;
+            }
+            .title {
+                font-size: 36px;
+            }
+            .entry-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Анна Перова</h1>
-            <p class="subtitle">HR Business Partner · Data Engineer · Tech HR в AI</p>
-            <p class="tagline">17+ лет в IT HR, из них 12+ лет — Tech HR в AI (Samsung AI Center, Huawei, AIRI)</p>
-            
-            <div class="links">
-                <a href="https://github.com/AnnaPerova88" target="_blank">GitHub</a>
-                <a href="https://www.kaggle.com/mlsputnik" target="_blank">Kaggle</a>
-                <a href="https://www.linkedin.com/in/annaperova/" target="_blank">LinkedIn</a>
-                <a href="mailto:perovaan.hr@gmail.com">Email</a>
-                <a href="cv.pdf">Curriculum Vitae</a>
-            </div>
-        </header>
+        <!-- Навигация как у Дарьи -->
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#bio">Bio</a>
+            <a href="#projects">Projects</a>
+            <a href="#papers">Papers</a>
+            <a href="#experience">Experience</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#interests">Interests</a>
+        </div>
 
-        <section class="bio">
+        <!-- Заголовок -->
+        <h1 class="title">Анна Перова</h1>
+        <div class="subtitle">HR Business Partner · Data Engineer · Tech HR в AI</div>
+        <div class="tagline">17+ лет в IT HR, из них 12+ лет — Tech HR в AI (Samsung AI Center, Huawei, AIRI)</div>
+
+        <!-- Социальные ссылки -->
+        <div class="social-links">
+            <a href="https://github.com/AnnaPerova88" target="_blank">GitHub</a>
+            <a href="https://www.kaggle.com/mlsputnik" target="_blank">Kaggle</a>
+            <a href="https://www.linkedin.com/in/annaperova/" target="_blank">LinkedIn</a>
+            <a href="mailto:perovaan.hr@gmail.com">Email</a>
+            <a href="cv.pdf">Curriculum Vitae</a>
+        </div>
+
+        <!-- Bio секция -->
+        <section id="bio">
             <h2>Bio</h2>
-            <p>HR Business Partner с техническим фундаментом: 2+ года Python, ML (NLP, CV, RecSys), опыт работы с LLM (Qwen, Gemini, Perplexity, Grok, GPT-5). Разработала и внедрила систему мотивации, обновила реферальную программу, внедрила ATS. Получила для Samsung премию HR Brand в категории "мир" впервые за 25 лет.</p>
-            <p><strong>5 место</strong> в Хакатоне Сбера HackLab 2025 (разработка синтезатора на FPGA Nexus A7). Tech Leader и Data Engineer в хакатоне от Сбер Cloud (AI-ментор на основе RAG, LLM).</p>
+            <div class="bio-text">
+                HR Business Partner с техническим фундаментом: 2+ года Python, ML (NLP, CV, RecSys), опыт работы с LLM (Qwen, Gemini, Perplexity, Grok, GPT-5). Разработала и внедрила систему мотивации, обновила реферальную программу, внедрила ATS. Получила для Samsung премию HR Brand в категории "мир" впервые за 25 лет.
+            </div>
+            <div class="bio-text">
+                <strong>5 место</strong> в Хакатоне Сбера HackLab 2025 (разработка синтезатора на FPGA Nexus A7). Tech Leader и Data Engineer в хакатоне от Сбер Cloud (AI-ментор на основе RAG, LLM).
+            </div>
         </section>
 
-        <section class="projects">
+        <!-- Projects -->
+        <section id="projects">
             <h2>Projects</h2>
             
-            <div class="project-item">
-                <h3>Health Tech — Анализ медицинских заключений по КТ лёгких</h3>
-                <p>Анализ 1M+ медицинских репортов с помощью Qwen, применение reasoning, CoT. Разработка эвристики для бинарной классификации текстов.</p>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Health Tech — Анализ медицинских заключений по КТ лёгких</span>
+                    <span class="entry-date">2025</span>
+                </div>
+                <div class="entry-description">Анализ 1M+ медицинских репортов с помощью Qwen, применение reasoning, CoT. Разработка эвристики для бинарной классификации текстов.</div>
             </div>
 
-            <div class="project-item">
-                <h3>DiverseFemImages — AAAI 2026 (на ревью)</h3>
-                <p>Создание и публикация датасета из 2500 diversity изображений женщин в STEM. Оптимизация с помощью Pillow. Подана статья на конференцию AAAI, Singapore.</p>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">DiverseFemImages — AAAI 2026 (на ревью)</span>
+                    <span class="entry-date">2025-2026</span>
+                </div>
+                <div class="entry-description">Создание датасета из 2500 diversity изображений женщин в STEM. Оптимизация с помощью Pillow. Подана статья на конференцию AAAI, Singapore.</div>
             </div>
 
-            <div class="project-item">
-                <h3>AI-ментор на основе RAG, LLM</h3>
-                <p>Чат-бот для изучения ML, DL, NLP, CV с развернутыми ответами, рекомендациями книг и статей.</p>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">AI-ментор на основе RAG, LLM</span>
+                    <span class="entry-date">2024</span>
+                </div>
+                <div class="entry-description">Чат-бот для изучения ML, DL, NLP, CV с развернутыми ответами, рекомендациями книг и статей. Хакатон Сбер Cloud.</div>
             </div>
 
-            <div class="project-item">
-                <h3>Рекомендательная система книг</h3>
-                <p>RecSys на основе интересов пользователя и коллаборативной фильтрации.</p>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Рекомендательная система книг</span>
+                    <span class="entry-date">2024</span>
+                </div>
+                <div class="entry-description">RecSys на основе интересов пользователя и коллаборативной фильтрации.</div>
             </div>
 
-            <div class="project-item">
-                <h3>Интерактивная суммаризация текста</h3>
-                <p>BART, T5, spaCy, wordcloud, ipywidgets — обобщение текста и визуализация ключевых терминов.</p>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">FPGA синтезатор — HackLab SBER</span>
+                    <span class="entry-date">2025</span>
+                </div>
+                <div class="entry-description">MP3/Wav плеер, синтезатор на микросхеме FPGA Nexys A7. <strong>5 место</strong></div>
             </div>
         </section>
 
-        <section class="papers">
-            <h2>Papers & Publications</h2>
-            <ul>
-                <li><strong>DiverseFemImages: Using Controlled Imbalance to Develop More Representative and Inclusive AI Images of Women in STEM Professions</strong> — AAAI, Singapore 2026 (under review)</li>
-                <li><strong>Особенности структуры социальных представлений об искусственном интеллекте среди специалистов Data Science и UI/UX дизайнеров</strong> — III Международная научно-практическая конференция, Калужский государственный университет, 2024</li>
-            </ul>
-        </section>
-
-        <section class="teaching">
-            <h2>Teaching & Training</h2>
-            <ul>
-                <li>Тренинги по IT-рекрутменту (Innovative People, X5 Retail Group, Московская Биржа)</li>
-                <li>Обучение сотрудников проведению STAR-интервью</li>
-                <li>Разработка и проведение тренингов для Tech HR</li>
-            </ul>
-        </section>
-
-        <section class="experience">
-            <h2>Experience Highlights</h2>
+        <!-- Papers -->
+        <section id="papers">
+            <h2>Papers</h2>
             
-            <div class="exp-item">
-                <h3>AI-Startup (USA-based) — Junior Data Engineer / Tech HR</h3>
-                <p class="date">2025 — настоящее время</p>
-                <p>Подбор ML Team Leader, Senior Data Engineer, CV Engineer. Создание синтетического датасета и ML модели для прогнозирования рисков.</p>
+            <div class="paper-item">
+                <div class="paper-title">DiverseFemImages: Using Controlled Imbalance to Develop More Representative and Inclusive AI Images of Women in STEM Professions</div>
+                <div class="paper-venue">AAAI, Singapore 2026 (under review)</div>
             </div>
 
-            <div class="exp-item">
-                <h3>AIRI (Исследовательский институт) — Junior Data Engineer</h3>
-                <p class="date">Июнь 2025 — август 2025</p>
-                <p>Анализ 1M+ медицинских репортов, тестирование LLM (Qwen, Gemini, Perplexity, Grok, GPT-5), написание ТЗ для MVP ML-продуктов.</p>
-            </div>
-
-            <div class="exp-item">
-                <h3>Samsung AI Center — Tech HR / HRBP</h3>
-                <p class="date">2018-2025</p>
-                <p>Найм 4 AI лабораторий с 0 (CV, AR/VR, MultiModal, Bayesian Methods) — 150+ человек. Премия HR Brand года.</p>
-            </div>
-
-            <div class="exp-item">
-                <h3>Huawei — Tech HR / Recruitment Team Leader</h3>
-                <p class="date">2015-2018</p>
-                <p>Найм команд CBG, Harmony OS, Hisilicon, AR/VR. Управление командой из 5 рекрутеров.</p>
+            <div class="paper-item">
+                <div class="paper-title">Особенности структуры социальных представлений об искусственном интеллекте среди специалистов Data Science и UI/UX дизайнеров</div>
+                <div class="paper-venue">III Международная научно-практическая конференция, Калужский государственный университет, 2024</div>
             </div>
         </section>
 
-        <section class="education">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>НИЯУ МИФИ</strong> — Прикладная математика и информатика (магистратура), 2024-2026</li>
-                <li><strong>МГУ им. Ломоносова</strong> — Социальная психология (специалитет), 2005-2011</li>
-            </ul>
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">AI-Startup (USA-based) — Junior Data Engineer / Tech HR</span>
+                    <span class="entry-date">2025 — present</span>
+                </div>
+                <div class="entry-description">Подбор ML Team Leader, Senior Data Engineer, CV Engineer. Создание синтетического датасета и ML модели для прогнозирования рисков.</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">AIRI (Исследовательский институт) — Junior Data Engineer</span>
+                    <span class="entry-date">Jun 2025 — Aug 2025</span>
+                </div>
+                <div class="entry-description">Анализ 1M+ медицинских репортов, тестирование LLM (Qwen, Gemini, Perplexity, Grok, GPT-5), написание ТЗ для MVP ML-продуктов.</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Samsung AI Center — Tech HR / HRBP</span>
+                    <span class="entry-date">2018 — 2025</span>
+                </div>
+                <div class="entry-description">Найм 4 AI лабораторий с 0 (CV, AR/VR, MultiModal, Bayesian Methods) — 150+ человек. Премия HR Brand года. Внедрение ATS, разработка системы мотивации.</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Huawei — Tech HR / Recruitment Team Leader</span>
+                    <span class="entry-date">2015 — 2018</span>
+                </div>
+                <div class="entry-description">Найм команд CBG, Harmony OS, Hisilicon, AR/VR. Управление командой из 5 рекрутеров. HR-аналитика для 14 бизнес-юнитов.</div>
+            </div>
         </section>
 
-        <section class="skills">
+        <!-- Teaching -->
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <div class="entry">
+                <div class="entry-title">Тренинги по IT-рекрутменту</div>
+                <div class="entry-description">Innovative People, X5 Retail Group, Московская Биржа и другие финтех проекты</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Обучение STAR-интервью</div>
+                <div class="entry-description">Разработка и проведение тренингов для сотрудников компании</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Тренинги для Tech HR</div>
+                <div class="entry-description">Разработка и проведение профессиональных тренингов</div>
+            </div>
+        </section>
+
+        <!-- Interests -->
+        <section id="interests">
+            <h2>Interests</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Responsible AI</span>
+                <span class="skill-tag">ML Ethics</span>
+                <span class="skill-tag">Diversity in Tech</span>
+                <span class="skill-tag">Women in STEM</span>
+                <span class="skill-tag">LLM Safety</span>
+                <span class="skill-tag">AI for Healthcare</span>
+            </div>
+        </section>
+
+        <!-- Skills как в CV -->
+        <section>
             <h2>Skills</h2>
-            
-            <div class="skills-grid">
-                <div>
-                    <h3>HR & Management</h3>
-                    <p>Executive Search, Headhunting, C&B, HR Analytics, ATS внедрение, DevRel, Event Management, Training & Development</p>
+            <div class="entry">
+                <div class="entry-title">HR & Management</div>
+                <div class="skills-list">
+                    <span class="skill-tag">Executive Search</span>
+                    <span class="skill-tag">Headhunting</span>
+                    <span class="skill-tag">C&B</span>
+                    <span class="skill-tag">HR Analytics</span>
+                    <span class="skill-tag">ATS</span>
+                    <span class="skill-tag">DevRel</span>
+                    <span class="skill-tag">Training & Development</span>
                 </div>
-                <div>
-                    <h3>Machine Learning</h3>
-                    <p>NLP, Computer Vision, RecSys, LLM, PyTorch, TensorFlow, Scikit-learn, XGBoost, CatBoost, LightGBM</p>
-                </div>
-                <div>
-                    <h3>Data Engineering</h3>
-                    <p>Python, Pandas, NumPy, Matplotlib, Seaborn, SQL, Time Series, EDA</p>
-                </div>
-                <div>
-                    <h3>Languages</h3>
-                    <p>Русский (native), English (fluent), Deutsch (A2/B1), Français (A2/B1), Español (A1)</p>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Machine Learning & Data</div>
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">LLM</span>
+                    <span class="skill-tag">RecSys</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Scikit-learn</span>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>Responsible AI & Human-Centered HR · Building better tech for a better world</p>
+            Responsible AI & Human-Centered HR · Building better tech for a better world
         </footer>
     </div>
 </body>
